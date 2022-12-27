@@ -1,0 +1,26 @@
+{
+	"name": "grama_meio",
+	"plugin-id": "TiledBg",
+	"sid": 522414769770630,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Sólido",
+			"sid": 515631775010034
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 128,
+		"height": 128,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 8439304,
+		"useCollisionPoly": true
+	}
+}

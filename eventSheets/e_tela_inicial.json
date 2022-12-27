@@ -5,27 +5,23 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 645578552808796,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "começar"
-					}
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 441517357241176
 				}
 			],
 			"actions": [
 				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 741234664681713,
+					"id": "set-height",
+					"objectClass": "botao_iniciar",
+					"sid": 431144689793844,
+					"behaviorType": "ProjetorDeSombra",
 					"parameters": {
-						"layout": "fase_01"
+						"height": "10"
 					}
 				}
 			],
-			"sid": 866113338845458
+			"sid": 229979287176811
 		},
 		{
 			"eventType": "block",
@@ -33,22 +29,25 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
-					"sid": 711279693691151,
+					"sid": 364158138007453,
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "Sair"
+						"object-clicked": "botao_iniciar"
 					}
 				}
 			],
 			"actions": [
 				{
-					"id": "close",
-					"objectClass": "Navegador",
-					"sid": 470452990571713
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 939410484255346,
+					"parameters": {
+						"layout": "fase_01"
+					}
 				}
 			],
-			"sid": 727617936181274
+			"sid": 474062720882913
 		}
 	],
 	"sid": 147357563021052
