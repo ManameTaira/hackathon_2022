@@ -1,0 +1,54 @@
+{
+	"name": "e_tela_inicial",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 441517357241176
+				}
+			],
+			"actions": [
+				{
+					"id": "set-height",
+					"objectClass": "botao_iniciar",
+					"sid": 431144689793844,
+					"behaviorType": "ProjetorDeSombra",
+					"parameters": {
+						"height": "10"
+					}
+				}
+			],
+			"sid": 229979287176811
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 364158138007453,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "botao_iniciar"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 939410484255346,
+					"parameters": {
+						"layout": "fase_01"
+					}
+				}
+			],
+			"sid": 474062720882913
+		}
+	],
+	"sid": 147357563021052
+}

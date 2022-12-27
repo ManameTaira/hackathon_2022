@@ -1,0 +1,26 @@
+{
+	"name": "portas",
+	"plugin-id": "TiledBg",
+	"sid": 928932268185097,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Sólido",
+			"sid": 529544937830544
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 73,
+		"height": 6,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 8852677,
+		"useCollisionPoly": true
+	}
+}

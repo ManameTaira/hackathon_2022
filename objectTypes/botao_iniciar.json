@@ -1,0 +1,43 @@
+{
+	"name": "botao_iniciar",
+	"plugin-id": "Sprite",
+	"sid": 306141851767120,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "shadowcaster",
+			"name": "ProjetorDeSombra",
+			"sid": 325031284415480
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 223,
+						"height": 77,
+						"originX": 0.4977578475336323,
+						"originY": 0.5584415584415584,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3105031,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 539683414188004,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

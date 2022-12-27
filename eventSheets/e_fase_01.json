@@ -1,0 +1,498 @@
+{
+	"name": "e_fase_01",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "e_geral"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 392142240146820
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Áudio",
+					"sid": 107421338203595,
+					"parameters": {
+						"audio-file": "Soundtrack_A_Bit_Of_Hope_-_David_Fesliyan",
+						"loop": "looping",
+						"volume": "-20",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 948658329018884
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "jogador_movimento",
+					"sid": 515862614781525,
+					"parameters": {
+						"object": "tubarao"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Áudio",
+					"sid": 653210549493909,
+					"parameters": {
+						"audio-file": "mordida_tubarão",
+						"loop": "not-looping",
+						"volume": "-10",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "set-ignoring-input",
+					"objectClass": "jogador_movimento",
+					"sid": 524048286662968,
+					"behaviorType": "Plataforma",
+					"parameters": {
+						"input": "start-ignoring"
+					}
+				},
+				{
+					"id": "set-gravity",
+					"objectClass": "jogador_movimento",
+					"sid": 676788950107080,
+					"behaviorType": "Plataforma",
+					"parameters": {
+						"gravity": "1"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Áudio",
+					"sid": 762323933327145,
+					"parameters": {
+						"audio-file": "derrota",
+						"loop": "not-looping",
+						"volume": "-25",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 870279554480298,
+					"parameters": {
+						"seconds": "1.5"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "jogador_movimento",
+					"sid": 960995300236656,
+					"parameters": {
+						"object": "inicio_fase",
+						"image-point-optional": "0"
+					}
+				}
+			],
+			"sid": 375264462135877
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "jogador_movimento",
+					"sid": 842631686664283,
+					"parameters": {
+						"object": "final_fase"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 185401043319870,
+					"parameters": {
+						"layout": "fase_02"
+					}
+				}
+			],
+			"sid": 239326061210902
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-outside-layout",
+					"objectClass": "jogador_movimento",
+					"sid": 507739489548840
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Áudio",
+					"sid": 819915097526443,
+					"parameters": {
+						"audio-file": "derrota",
+						"loop": "not-looping",
+						"volume": "-25",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 348823986363984,
+					"parameters": {
+						"seconds": "1.5"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "jogador_movimento",
+					"sid": 846545993372680,
+					"parameters": {
+						"object": "inicio_fase",
+						"image-point-optional": "0"
+					}
+				}
+			],
+			"sid": 980945327368984
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "jogador_movimento",
+					"sid": 772207748581736,
+					"parameters": {
+						"object": "ondas"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Áudio",
+					"sid": 871863673887802,
+					"parameters": {
+						"audio-file": "mergulho",
+						"loop": "not-looping",
+						"volume": "-10",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 487523816315650
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "inicio_fase",
+					"sid": 580317946157043,
+					"parameters": {
+						"object": "jogador_movimento"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-gravity",
+					"objectClass": "jogador_movimento",
+					"sid": 867034264273843,
+					"behaviorType": "Plataforma",
+					"parameters": {
+						"gravity": "1500"
+					}
+				},
+				{
+					"id": "set-ignoring-input",
+					"objectClass": "jogador_movimento",
+					"sid": 160774070674178,
+					"behaviorType": "Plataforma",
+					"parameters": {
+						"input": "stop-ignoring"
+					}
+				}
+			],
+			"sid": 895713444324496
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "wilson_events",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-animation-finished",
+							"objectClass": "wilson",
+							"sid": 356891759672689,
+							"parameters": {
+								"animation": "\"ataque\""
+							}
+						},
+						{
+							"id": "has-los-to-object",
+							"objectClass": "wilson",
+							"sid": 390679797480278,
+							"behaviorType": "CampoDeVisão",
+							"parameters": {
+								"object": "jogador_animacao",
+								"image-point": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "wilson",
+							"sid": 147420955246150,
+							"parameters": {
+								"animation": "\"ataque\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 402290364856118,
+							"parameters": {
+								"object-to-create": "bola_wilson",
+								"layer": "0",
+								"x": "2122",
+								"y": "290",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "bola_wilson",
+							"sid": 503212862859455,
+							"behaviorType": "Projétil",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "bola_wilson",
+							"sid": 473102514951736,
+							"behaviorType": "Projétil",
+							"parameters": {
+								"speed": "-150"
+							}
+						}
+					],
+					"sid": 671324291892172
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-los-to-object",
+							"objectClass": "wilson",
+							"sid": 909639599082126,
+							"behaviorType": "CampoDeVisão",
+							"parameters": {
+								"object": "jogador_animacao",
+								"image-point": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "wilson",
+							"sid": 161348581771289,
+							"parameters": {
+								"animation": "\"ataque\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 789329122923116
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-los-to-object",
+							"objectClass": "wilson",
+							"sid": 921527183237555,
+							"behaviorType": "CampoDeVisão",
+							"parameters": {
+								"object": "jogador_animacao",
+								"image-point": "0"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "wilson",
+							"sid": 912197946305165,
+							"parameters": {
+								"animation": "\"parado\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 866902379387433
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "bola_wilson",
+							"sid": 401145237208895,
+							"parameters": {
+								"object": "jogador_movimento"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-ignoring-input",
+							"objectClass": "jogador_movimento",
+							"sid": 543915585314874,
+							"behaviorType": "Plataforma",
+							"parameters": {
+								"input": "start-ignoring"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 988324151671026,
+							"parameters": {
+								"audio-file": "derrota",
+								"loop": "not-looping",
+								"volume": "-25",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 492816289556386,
+							"parameters": {
+								"seconds": "1.5"
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "jogador_movimento",
+							"sid": 999618635654712,
+							"parameters": {
+								"object": "inicio_fase",
+								"image-point-optional": "0"
+							}
+						}
+					],
+					"sid": 784652827400648
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-distance-travelled",
+							"objectClass": "bola_wilson",
+							"sid": 874106018183667,
+							"behaviorType": "Projétil",
+							"parameters": {
+								"comparison": 4,
+								"distance": "800"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "bola_wilson",
+							"sid": 986529987476659
+						}
+					],
+					"sid": 426474698643304
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "faca",
+							"sid": 854502643768680,
+							"parameters": {
+								"object": "wilson"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "wilson",
+							"sid": 134182985170020
+						},
+						{
+							"id": "destroy",
+							"objectClass": "faca",
+							"sid": 558834607934809
+						}
+					],
+					"sid": 770394485299989
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "faca",
+							"sid": 155565952366420,
+							"parameters": {
+								"object": "bola_wilson"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "bola_wilson",
+							"sid": 116510780810408
+						},
+						{
+							"id": "destroy",
+							"objectClass": "faca",
+							"sid": 657190196147542
+						}
+					],
+					"sid": 809312593254766
+				}
+			],
+			"sid": 248555842641999
+		}
+	],
+	"sid": 179274633128553
+}

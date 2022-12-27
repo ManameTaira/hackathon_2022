@@ -1,0 +1,407 @@
+{
+	"name": "e_geral",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 273496910674884
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "jogador_animacao",
+					"sid": 273702979223545,
+					"parameters": {
+						"object": "jogador_movimento",
+						"image-point-optional": "0"
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "jogador_animacao",
+					"sid": 508218367714690,
+					"behaviorType": "Atrelar",
+					"parameters": {
+						"pin-to": "jogador_movimento",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				}
+			],
+			"sid": 704397351766565
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 782446208811422,
+					"parameters": {
+						"key": 39
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "jogador_animacao",
+					"sid": 710916546086481,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 244661726906078
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 901248192306984,
+					"parameters": {
+						"key": 37
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "jogador_animacao",
+					"sid": 661867177335685,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 625823465031290
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 209007164167196,
+					"parameters": {
+						"key": 38
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Áudio",
+					"sid": 935762770990625,
+					"parameters": {
+						"audio-file": "pulo",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 608626701760482
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-moving",
+					"objectClass": "jogador_movimento",
+					"sid": 299244937684343,
+					"behaviorType": "Plataforma"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "jogador_animacao",
+					"sid": 965344714348130,
+					"parameters": {
+						"animation": "\"andando\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 715201982045820
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-speed",
+					"objectClass": "jogador_movimento",
+					"sid": 559781140567638,
+					"behaviorType": "Plataforma",
+					"parameters": {
+						"comparison": 0,
+						"speed": "0"
+					}
+				},
+				{
+					"id": "on-landed",
+					"objectClass": "jogador_movimento",
+					"sid": 877480381833248,
+					"behaviorType": "Plataforma"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "jogador_animacao",
+					"sid": 200153882323141,
+					"parameters": {
+						"animation": "\"parado\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 587700221036223,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-outside-layout",
+					"objectClass": "jogador_movimento",
+					"sid": 821395451013802
+				}
+			],
+			"actions": [],
+			"sid": 585301948027481
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-jumping",
+					"objectClass": "jogador_movimento",
+					"sid": 256329257734791,
+					"behaviorType": "Plataforma"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "jogador_animacao",
+					"sid": 336232166635173,
+					"parameters": {
+						"animation": "\"pulando\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 307422397982416
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 936047808722770,
+					"parameters": {
+						"key": 32
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "jogador_animacao",
+					"sid": 604230927173548,
+					"parameters": {
+						"animation": "\"ataque\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-ignoring-input",
+					"objectClass": "jogador_movimento",
+					"sid": 436639920168776,
+					"behaviorType": "Plataforma",
+					"parameters": {
+						"input": "start-ignoring"
+					}
+				}
+			],
+			"sid": 648283650578801
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-animation-finished",
+					"objectClass": "jogador_animacao",
+					"sid": 888131457287715,
+					"parameters": {
+						"animation": "\"ataque\""
+					}
+				},
+				{
+					"id": "is-mirrored",
+					"objectClass": "jogador_animacao",
+					"sid": 917783179215759
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 670153906055141,
+					"parameters": {
+						"object-to-create": "faca",
+						"layer": "0",
+						"x": "jogador_movimento.BBoxRight",
+						"y": "290",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-speed",
+					"objectClass": "faca",
+					"sid": 397941470537048,
+					"behaviorType": "Projétil",
+					"parameters": {
+						"speed": "150"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "faca",
+					"sid": 199649915542531,
+					"behaviorType": "Projétil",
+					"parameters": {
+						"state": "enabled"
+					}
+				},
+				{
+					"id": "set-scale",
+					"objectClass": "faca",
+					"sid": 191638161923603,
+					"parameters": {
+						"scale": "2.3"
+					}
+				},
+				{
+					"id": "set-ignoring-input",
+					"objectClass": "jogador_movimento",
+					"sid": 948471869839916,
+					"behaviorType": "Plataforma",
+					"parameters": {
+						"input": "stop-ignoring"
+					}
+				}
+			],
+			"sid": 220048076108745
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-animation-finished",
+					"objectClass": "jogador_animacao",
+					"sid": 354157904349255,
+					"parameters": {
+						"animation": "\"ataque\""
+					}
+				},
+				{
+					"id": "is-mirrored",
+					"objectClass": "jogador_animacao",
+					"sid": 196627309939195,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 591277972637996,
+					"parameters": {
+						"object-to-create": "faca",
+						"layer": "0",
+						"x": "jogador_movimento.BBoxLeft",
+						"y": "290",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-speed",
+					"objectClass": "faca",
+					"sid": 778333217466575,
+					"behaviorType": "Projétil",
+					"parameters": {
+						"speed": "-150"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "faca",
+					"sid": 303020600718984,
+					"behaviorType": "Projétil",
+					"parameters": {
+						"state": "enabled"
+					}
+				},
+				{
+					"id": "set-scale",
+					"objectClass": "faca",
+					"sid": 616416846326553,
+					"parameters": {
+						"scale": "2.3"
+					}
+				},
+				{
+					"id": "set-ignoring-input",
+					"objectClass": "jogador_movimento",
+					"sid": 561800501490637,
+					"behaviorType": "Plataforma",
+					"parameters": {
+						"input": "stop-ignoring"
+					}
+				}
+			],
+			"sid": 353310027409469
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-distance-travelled",
+					"objectClass": "faca",
+					"sid": 200180114699188,
+					"behaviorType": "Projétil",
+					"parameters": {
+						"comparison": 4,
+						"distance": "800"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "faca",
+					"sid": 653274268303997
+				}
+			],
+			"sid": 623395021046143
+		}
+	],
+	"sid": 327558694365625
+}
