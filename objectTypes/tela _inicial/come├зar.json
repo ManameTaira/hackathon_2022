@@ -1,36 +1,30 @@
 {
-	"name": "inicio_fase",
+	"name": "começar",
 	"plugin-id": "Sprite",
-	"sid": 802956950818421,
+	"sid": 766591771116600,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "solid",
-			"name": "Sólido",
-			"sid": 696405589516421
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 18,
-						"height": 127,
+						"width": 435,
+						"height": 114,
 						"originX": 0.5,
-						"originY": 1,
+						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 779538,
+						"imageSpriteId": 3602268,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 439631638790351,
-				"name": "Animation 1",
+				"sid": 338928943028671,
+				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

@@ -24,14 +24,6 @@
 		},
 		{
 			"type": "plugin",
-			"id": "Mouse",
-			"name": "Mouse",
-			"author": "Scirra",
-			"version": "r317.2",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
 			"id": "Keyboard",
 			"name": "Teclado",
 			"author": "Scirra",
@@ -40,8 +32,24 @@
 		},
 		{
 			"type": "plugin",
-			"id": "Audio",
-			"name": "Áudio",
+			"id": "Browser",
+			"name": "Navegador",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Tilemap",
+			"name": "Mosaico",
 			"author": "Scirra",
 			"version": "r317.2",
 			"bundled": false
@@ -64,24 +72,8 @@
 		},
 		{
 			"type": "behavior",
-			"id": "LOS",
-			"name": "Campo de visão",
-			"author": "Scirra",
-			"version": "r317.2",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "Bullet",
-			"name": "Projétil",
-			"author": "Scirra",
-			"version": "r317.2",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "Pin",
-			"name": "Atrelar",
+			"id": "Platform",
+			"name": "Plataforma",
 			"author": "Scirra",
 			"version": "r317.2",
 			"bundled": false
@@ -93,31 +85,18 @@
 			"author": "Scirra",
 			"version": "r317.2",
 			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "Platform",
-			"name": "Plataforma",
-			"author": "Scirra",
-			"version": "r317.2",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "shadowcaster",
-			"name": "Projetor de sombra",
-			"author": "Scirra",
-			"version": "r317.2",
-			"bundled": false
 		}
 	],
 	"uniqueId": "mrn5qjvb9p8",
 	"objectTypes": {
 		"items": [
 			"Mouse",
-			"botao_iniciar",
-			"Teclado",
-			"Áudio"
+			"montanhas",
+			"Sprite2",
+			"Sky",
+			"nuvens",
+			"terreno",
+			"Mosaico"
 		],
 		"subfolders": [
 			{
@@ -126,11 +105,8 @@
 					"PlanoDeFundoEmBlocos",
 					"PlanoDeFundoEmBlocos2",
 					"portas",
-					"ondas",
-					"tubarao",
-					"fundo_agua",
-					"wilson",
-					"bola_wilson"
+					"Sprite",
+					"tubarao"
 				],
 				"subfolders": [],
 				"name": "fase_01"
@@ -139,16 +115,29 @@
 				"items": [
 					"final_fase",
 					"inicio_fase",
-					"jogador_animacao",
-					"jogador_movimento",
-					"grama_meio",
-					"grama_esq",
-					"terra_esq",
-					"terra",
-					"faca"
+					"Jogador",
+					"Teclado"
 				],
 				"subfolders": [],
 				"name": "geral"
+			},
+			{
+				"items": [
+					"Navegador",
+					"BG",
+					"começar",
+					"Logo_Dead",
+					"Sair"
+				],
+				"subfolders": [],
+				"name": "tela _inicial"
+			},
+			{
+				"items": [
+					"PlanoDeFundoEmBlocos3"
+				],
+				"subfolders": [],
+				"name": "fase_2"
 			}
 		]
 	},
@@ -170,8 +159,7 @@
 		"items": [
 			"e_fase_01",
 			"e_tela_inicial",
-			"e_fase_02",
-			"e_geral"
+			"Folha de eventos 1"
 		],
 		"subfolders": []
 	},
@@ -181,56 +169,7 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [
-				{
-					"name": "mergulho.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 269030172667801,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "mordida_tubarão.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 441047428662693,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "durante_o_jogo.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 979167739564600,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "Soundtrack_A_Bit_Of_Hope_-_David_Fesliyan.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 478581076123811,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "pulo.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 675830314508915,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "derrota.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 347219782827560,
-					"file-info": {
-						"purpose": "none"
-					}
-				}
-			],
+			"items": [],
 			"subfolders": []
 		},
 		"music": {
@@ -361,7 +300,7 @@
 		"scriptsType": "module",
 		"framerateMode": "vsync",
 		"compositingMode": "standard",
-		"sampling": "nearest",
+		"sampling": "trilinear",
 		"downscaling": "medium",
 		"renderingMode": "auto",
 		"anisotropicFiltering": "auto",

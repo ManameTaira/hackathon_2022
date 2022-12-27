@@ -1,0 +1,60 @@
+{
+	"name": "Jogador",
+	"plugin-id": "Sprite",
+	"sid": 675404321529183,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Plataforma",
+			"sid": 938161000011034
+		},
+		{
+			"behaviorId": "scrollto",
+			"name": "CentrarEm",
+			"sid": 379944741157545
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 106,
+						"height": 158,
+						"originX": 0.46226415094339623,
+						"originY": 1.1455696202531647,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7084301,
+						"collisionPoly": {
+							"points": [
+								1,
+								0.9915611814345993,
+								0.0062893081761007386,
+								0.9957805907172996,
+								0.009433962264150941,
+								0,
+								0.9968553459119497,
+								0
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 621547006320975,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

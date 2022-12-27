@@ -1,41 +1,47 @@
 {
-	"name": "background",
+	"name": "Sprite2",
 	"plugin-id": "Sprite",
-	"sid": 370071087436415,
+	"sid": 947539206444699,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Sólido",
+			"sid": 307881567856478
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 338,
-						"height": 242,
+						"width": 512,
+						"height": 512,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 5222823,
+						"imageSpriteId": 8495981,
 						"collisionPoly": {
 							"points": [
-								0.0029585798816568047,
-								0.004132231404958678,
+								0,
+								0,
 								0.5,
-								0.004132231404958678,
-								0.9940828402366864,
-								0.004132231404958678,
-								0.9940828402366864,
+								0,
+								0.998046875,
+								0,
+								0.998046875,
 								0.5,
-								0.9940828402366864,
-								0.9917355371900827,
+								0.998046875,
+								0.998046875,
 								0.5,
-								0.9917355371900827,
-								0.0029585798816568047,
-								0.9917355371900827,
-								0.0029585798816568047,
+								0.998046875,
+								0,
+								0.998046875,
+								0,
 								0.5
 							]
 						},
@@ -43,8 +49,8 @@
 						"duration": 1
 					}
 				],
-				"sid": 223265339122154,
-				"name": "Animation 1",
+				"sid": 595087976360219,
+				"name": "mapa_fixo",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
